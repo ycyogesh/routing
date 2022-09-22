@@ -8,7 +8,11 @@ import { ContactusComponent } from './contactus/contactus.component';
 const routes: Routes = [
   {
     path : "aboutus",
-    component : AboutusComponent,
+    component : AboutusComponent
+  },
+  {
+    path : "contactus",
+    component : ContactusComponent,
     children : [
       {
         path : "compone",
@@ -19,10 +23,6 @@ const routes: Routes = [
         component : ComptwoComponent
       }
     ]
-  },
-  {
-    path : "contactus",
-    component : ContactusComponent
   }
 ];
 

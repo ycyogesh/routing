@@ -1,0 +1,29 @@
+.details {
+    display: flex;
+    flex-flow: column;
+    margin: 40px;
+
+
+    a {
+        color: navy;
+        text-decoration: none;
+        font-size: 18px;
+        margin-bottom: 10px;
+
+    }
+
+    a:hover {
+        color: firebrick;
+    }
+}
+
+.router {
+    display: flex;
+    margin: 40px;
+    font-size: 20px;
+    color: firebrick;
+    border: 2px solid black;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+}
