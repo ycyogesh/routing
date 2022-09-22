@@ -4,8 +4,14 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { ComponeComponent } from './compone/compone.component';
 import { ComptwoComponent } from './comptwo/comptwo.component';
 import { ContactusComponent } from './contactus/contactus.component';
+import { HomeComponent } from './home/home.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 const routes: Routes = [
+  {
+    path : "home",
+    component : HomeComponent
+  },
   {
     path : "aboutus",
     component : AboutusComponent
@@ -19,10 +25,14 @@ const routes: Routes = [
         component : ComponeComponent
       },
       {
-        path : "comptwo",
+        path : "comptwo",       // :variableName  -------> wildcard routing
         component : ComptwoComponent
       }
     ]
+  },
+  {
+    path : "**",
+    component : PagenotfoundComponent
   }
 ];
 
