@@ -25,7 +25,7 @@ const routes: Routes = [
         component : ComponeComponent
       },
       {
-        path : "comptwo",       // :variableName  -------> wildcard routing
+        path : ":comptwo",       // :variableName  -------> wildcard routing
         component : ComptwoComponent
       }
     ]
