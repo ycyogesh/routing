@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 @Component({
   selector: 'app-aboutus',
@@ -8,9 +8,9 @@ import { ActivatedRoute, Params } from '@angular/router';
 })
 export class AboutusComponent implements OnInit {
 
-  userId !: Params;
+  userId: number = 0;
   usersList : Array<any> = []
-  constructor(private route : ActivatedRoute) { }
+  constructor(private route : ActivatedRoute, private router : Router) { }
 
   ngOnInit(): void {
 
@@ -62,12 +62,10 @@ export class AboutusComponent implements OnInit {
     
 
   };
-  getId() {
-    this.route.params.subscribe((id) => {
-      console.log(id['id']);
+  getId(id:number) {
+      console.log(id);
       this.userId = id
-    })
+      this.router.navigate(['aboutus','users',this.userId])   // ,{relativeTo:this.route}
+    }
   }
 
-
-}

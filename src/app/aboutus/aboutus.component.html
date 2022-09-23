@@ -1,6 +1,6 @@
 <div>
     <ul *ngFor="let user of usersList,index as i">
-        <li><a [routerLink]="[user.id]" (click)="getId()">{{user.first_name}} {{user.last_name}}</a></li>
+        <li><p (click)="getId(user.id)">{{user.first_name}} {{user.last_name}}</p></li>
     </ul>
 </div>
 <div>
