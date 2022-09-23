@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-aboutus',
@@ -7,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutusComponent implements OnInit {
 
+  userId !: Params;
   usersList : Array<any> = []
-  constructor() { }
+  constructor(private route : ActivatedRoute) { }
 
   ngOnInit(): void {
+
     this.usersList = [
       {
         "id": 7,
@@ -55,7 +58,16 @@ export class AboutusComponent implements OnInit {
       "avatar": "https://reqres.in/img/faces/12-image.jpg"
   }
     ]
+    
+    
 
+  };
+  getId() {
+    this.route.params.subscribe((id) => {
+      console.log(id['id']);
+      this.userId = id
+    })
   }
+
 
 }

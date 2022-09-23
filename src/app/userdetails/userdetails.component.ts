@@ -8,14 +8,10 @@ import { ActivatedRoute, Params } from '@angular/router';
 })
 export class UserdetailsComponent implements OnInit {
   userId !: Params;
-  constructor(private route : ActivatedRoute) { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.route.params.subscribe((id)=>{
-      console.log(id);
-      
-      this.userId = id['id']
-    })
+
   }
 
 }
