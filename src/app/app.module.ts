@@ -9,6 +9,7 @@ import { ComponeComponent } from './compone/compone.component';
 import { ComptwoComponent } from './comptwo/comptwo.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { HomeComponent } from './home/home.component';
+import { UserdetailsComponent } from './userdetails/userdetails.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HomeComponent } from './home/home.component';
     ComponeComponent,
     ComptwoComponent,
     PagenotfoundComponent,
-    HomeComponent
+    HomeComponent,
+    UserdetailsComponent
   ],
   imports: [
     BrowserModule,

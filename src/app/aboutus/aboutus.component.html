@@ -1,2 +1,8 @@
-<p>aboutus works!</p>
-
+<div>
+    <ul *ngFor="let user of usersList,index as i">
+        <li><a [routerLink]="['userdetails',user.id]">{{user.first_name}} {{user.last_name}}</a></li>
+    </ul>
+</div>
+<div>
+    <router-outlet></router-outlet>
+</div>

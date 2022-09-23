@@ -6,34 +6,47 @@ import { ComptwoComponent } from './comptwo/comptwo.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { HomeComponent } from './home/home.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { UserdetailsComponent } from './userdetails/userdetails.component';
 
 const routes: Routes = [
   {
-    path : "",
-    component : HomeComponent
+    path: "",
+    component: HomeComponent
     // redirectTo : "path"  pathMatch : "full" -------> This is Another way of redirecting
   },
   {
-    path : "aboutus",
-    component : AboutusComponent
-  },
-  {
-    path : "contactus",
-    component : ContactusComponent,
-    children : [
+    path: "aboutus",
+    component: AboutusComponent,
+    children: [
       {
-        path : "compone",
-        component : ComponeComponent
-      },
-      {
-        path : ":variable",   //comptwo    // :variableName  -------> wildcard routing
-        component : ComptwoComponent
+        path: "userdetails",
+        component: UserdetailsComponent,
+        children: [
+          {
+            path: ":id",
+            component: UserdetailsComponent
+          }
+        ]
       }
     ]
   },
   {
-    path : "**",
-    component : PagenotfoundComponent
+    path: "contactus",
+    component: ContactusComponent,
+    children: [
+      {
+        path: "compone",
+        component: ComponeComponent
+      },
+      {
+        path: ":variable",   //comptwo    // :variableName  -------> wildcard routing
+        component: ComptwoComponent
+      }
+    ]
+  },
+  {
+    path: "**",
+    component: PagenotfoundComponent
   }
 ];
 

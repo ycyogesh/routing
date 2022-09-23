@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-comptwo',
@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ComptwoComponent implements OnInit {
 
-  constructor(private route : ActivatedRoute) { }
+  constructor(private route : ActivatedRoute, private navigate : Router) { }
 
   ngOnInit(): void {
     this.route.params.subscribe((parameter)=>{
