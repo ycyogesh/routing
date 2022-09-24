@@ -10,6 +10,7 @@ import { ComptwoComponent } from './comptwo/comptwo.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { HomeComponent } from './home/home.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 // import { UserComponent } from './newModule/user/user.component';
 // import { NewModuleuserComponent } from './new-moduleuser/new-moduleuser.component';
 
@@ -28,7 +29,8 @@ import { UserdetailsComponent } from './userdetails/userdetails.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
