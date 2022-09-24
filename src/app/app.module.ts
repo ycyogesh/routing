@@ -10,6 +10,8 @@ import { ComptwoComponent } from './comptwo/comptwo.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { HomeComponent } from './home/home.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
+// import { UserComponent } from './newModule/user/user.component';
+// import { NewModuleuserComponent } from './new-moduleuser/new-moduleuser.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { UserdetailsComponent } from './userdetails/userdetails.component';
     ComptwoComponent,
     PagenotfoundComponent,
     HomeComponent,
-    UserdetailsComponent
+    UserdetailsComponent,
+    // UserComponent,
+    // NewModuleuserComponent
   ],
   imports: [
     BrowserModule,

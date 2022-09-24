@@ -39,6 +39,10 @@ const routes: Routes = [
     ]
   },
   {
+    path : "newModuleComponent",
+    loadChildren : ()=> import("./new-module/new-module.module").then(m=>m.NewModuleModule)
+  },
+  {
     path: "**",
     component: PagenotfoundComponent
   }
