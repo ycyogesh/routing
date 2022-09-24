@@ -1,19 +1,29 @@
 {
-  "posts": [
+  "userlist": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "name": "New User",
+      "email": "newUser@email.com"
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 2,
+      "name": "New User 123",
+      "email": "newUser123@email.com"
+    },
+    {
+      "id": 3,
+      "name": "yc",
+      "email": "yc@mail.com"
+    },
+    {
+      "id": 4,
+      "name": "yc",
+      "email": "yc@mail.com"
+    },
+    {
+      "id": 5,
+      "name": "yc",
+      "email": "yc@mail.com"
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

@@ -9,12 +9,17 @@ import { AppServiceService } from './app-service.service';
 export class AppComponent {
   title = 'routing';
 
+  usersList: any;
   constructor(private appService : AppServiceService){}
 
   ngOnInit(){
     this.appService.getAllUsers().subscribe((usersList)=>{
       console.log(usersList);
+
+    // this.appService.addUser({"id":5,"name":"yc","email":"yc@mail.com"}).subscribe((result)=>{
+    //   console.log(result);
       
+    // })
     })
   }
   
